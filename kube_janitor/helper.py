@@ -21,7 +21,7 @@ TTL_UNLIMITED = 'forever'
 
 
 def parse_ttl(ttl: str) -> int:
-    if lower(ttl) == TTL_UNLIMITED:
+    if ttl.lower() == TTL_UNLIMITED:
         return -1
     match = TTL_PATTERN.match(ttl)
     if not match:
