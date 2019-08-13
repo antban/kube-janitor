@@ -158,7 +158,6 @@ def handle_resource_on_ttl(resource, rules, delete_notification: int, dry_run: b
                     if utcnow() > notification_time and not was_notified(resource):
                         send_delete_notification(resource, reason, expiry_time, dry_run=dry_run)
 
-
     return counter
 
 
